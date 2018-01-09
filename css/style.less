@@ -1,0 +1,159 @@
+.index-page {
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	main {
+		flex: 1 0 auto;
+		display: flex;
+		.filters {
+			flex: 0 0 auto;
+			margin-right: 20px;
+
+			.price-filter {
+				margin-bottom: 20px;
+				&__title {
+					font-weight: bold;
+				}
+			}
+
+			.brand-filter {
+				margin-bottom: 20px;
+				&__title {
+					font-weight: bold;
+				}
+			}
+		}
+		.products {
+			flex: 1 1 auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-content: flex-start;
+			margin: -15px 0 0 -15px;
+			h2 {
+				flex: 1 0 100%;
+				margin: 15px 0 0 15px;
+			}
+			.product {
+				display: flex;
+				flex-direction: column;
+				flex: 0 0 auto;
+				margin: 15px 0 20px 15px;
+				&__img {
+					max-width: 200px;
+					margin-bottom: 5px;
+				}
+				&__name {
+					margin-bottom: 5px;
+				}
+				&__price-wrap {
+					display: flex;
+					align-items: center;
+				}
+				&__price {
+					flex: 1 1 auto;
+				}
+				&__btn {
+					flex: 1 1 80px;
+				}
+			}
+			.loading {
+				margin: 15px 0 0 15px;
+			}
+			.not-found {
+				margin: 15px 0 0 15px;
+			}
+		}
+	}
+}
+
+.cart-page {
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	main {
+		flex: 1 0 auto;
+		.products {
+			.product {
+				display: flex;
+				align-items: center;
+ 				margin-bottom: 20px;
+				&__img {
+					flex: 0 0 auto;
+					max-width: 200px;
+					margin-right: 20px;
+				}
+				&__name {
+					flex: 1 1 auto;
+					margin-right: 20px;
+				}
+				&__price {
+					flex: 0 0 100px;
+					margin-right: 20px;
+				}
+				&__count-btns {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin-right: 20px;
+				}
+				&__count {
+					width: 50px;
+					margin: 5px 0;
+					text-align: right;
+				}
+				&__up-btn, &__down-btn {
+					cursor: pointer;
+				}
+				&__btn {
+
+				}
+			}
+		}
+	}
+}
+
+.header {
+	display: flex;
+	margin-bottom: 20px;
+	&__logo {
+		flex: 0 0 auto;
+		margin-right: 20px;
+	}
+	&__menu {
+		flex: 1 1 auto;
+		margin: 0 20px 0 0;
+		padding: 20px 0 0 0;
+		&__item {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+	&__cart {
+		padding: 20px 0 0 0;
+		flex: 0 0 auto;
+	}
+}
+
+.footer {
+	display: flex;
+	&__copyright {
+		flex: 0 0 auto;
+		margin-right: 20px;
+	}
+	&__menu {
+		flex: 1 1 auto;
+		margin: 0 20px 0 0;
+		padding: 0;
+		&__item {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+}

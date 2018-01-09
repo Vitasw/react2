@@ -1,0 +1,13 @@
+{
+    "name": "vita/react2",
+    "description": "My second react project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Vita",
+            "email": "vitasw@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
