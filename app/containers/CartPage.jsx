@@ -5,6 +5,8 @@ import Footer from '../components/Footer.jsx'
 import CartProduct from '../components/CartProduct.jsx';
 
 const CartPage = props => {
+    const itogo = props.cart.reduce((sum, current) => sum+current.count*current.product.price, 0);
+
     return (
         <div className="cart-page">
             <Header match={props.match}/>
@@ -13,6 +15,7 @@ const CartPage = props => {
                 <div className="products">
                     {props.cart.map(cartProduct=><CartProduct key={cartProduct.id} cartProduct={cartProduct}/>)}
                 </div>
+                <h2>Итого: {itogo} &#8381;</h2>
             </main>
             <Footer match={props.match}/>
         </div>
