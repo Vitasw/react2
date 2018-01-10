@@ -8,4 +8,4 @@ export const APPLY_FILTERS = 'APPLY_FILTERS';
 export const CLEAR_FILTERS = 'CLEAR_FILTERS';
 
 export const CLEAR_PRODUCTS = 'CLEAR_PRODUCTS';
-export const LOAD_PRODUCTS = 'LOAD_PRODUCTS';
+export const SET_PRODUCTS = 'SET_PRODUCTS';

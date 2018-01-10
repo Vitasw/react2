@@ -1,8 +1,8 @@
 import React from 'react';
 import Product from './Product.jsx';
 import {connect} from 'react-redux';
-import {productLoader} from '../api/loader';
-import {loadProducts, clearProducts} from '../actions';
+import {loadProducts} from '../api/loader';
+import {setProducts, clearProducts} from '../actions';
 
 class Products extends React.Component {
     constructor(props) {
@@ -11,9 +11,8 @@ class Products extends React.Component {
     }
 
     componentDidMount() {
-        productLoader(undefined, products => {
-            this.props.dispatch(loadProducts(products));
-        });
+        loadProducts(undefined)
+            .then(products => this.props.dispatch(setProducts(products)));
     }
 
     componentWillReceiveProps(nextProps) {
@@ -21,9 +20,8 @@ class Products extends React.Component {
         if (this.state.categoryId!=newCategoryId) {
             this.setState({categoryId: newCategoryId});
             this.props.dispatch(clearProducts());
-            productLoader(newCategoryId, products => {
-                this.props.dispatch(loadProducts(products));
-            });
+            loadProducts(newCategoryId)
+                .then(products => this.props.dispatch(setProducts(products)));
         }
     }
 

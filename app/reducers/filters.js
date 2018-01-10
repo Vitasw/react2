@@ -1,4 +1,4 @@
-import {APPLY_FILTERS, LOAD_PRODUCTS, CLEAR_FILTERS} from '../constants/ActionTypes';
+import {APPLY_FILTERS, SET_PRODUCTS, CLEAR_FILTERS} from '../constants/ActionTypes';
 
 const initFilters = {
     prices: {
@@ -11,7 +11,7 @@ const initFilters = {
 
 const filtersReducer = function(state = initFilters, action) {
     switch (action.type) {
-        case LOAD_PRODUCTS:
+        case SET_PRODUCTS:
             let minPrice = Number.POSITIVE_INFINITY;
             let maxPrice = Number.NEGATIVE_INFINITY;
 

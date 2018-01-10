@@ -1,13 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import {menuLoader, productLoader} from '../api/loader';
+import {loadMenu} from '../api/loader';
 
 class Menu extends React.Component {
     constructor(props) {
         super(props);
         this.state = {categories: [], categoryId: undefined};
-        menuLoader(categories => this.setState({categories}));
+        loadMenu()
+            .then(categories => this.setState({categories}));
     }
 
     componentWillReceiveProps(nextProps) {

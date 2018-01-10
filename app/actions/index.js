@@ -1,5 +1,5 @@
 import {
-    ADD_TO_CART, APPLY_FILTERS, CLEAR_FILTERS, CLEAR_PRODUCTS, DEC_COUNT, INC_COUNT, LOAD_PRODUCTS,
+    ADD_TO_CART, APPLY_FILTERS, CLEAR_FILTERS, CLEAR_PRODUCTS, DEC_COUNT, INC_COUNT, SET_PRODUCTS,
     REMOVE_FROM_CART, CHANGE_COUNT
 } from '../constants/ActionTypes';
 
@@ -42,8 +42,8 @@ const clearProducts = () => ({
     type: CLEAR_PRODUCTS
 });
 
-const loadProducts = products => ({
-    type: LOAD_PRODUCTS,
+const setProducts = products => ({
+    type: SET_PRODUCTS,
     products,
 });
 
@@ -55,6 +55,6 @@ export {
     changeCount,
     applyFilters,
     clearFilters,
-    loadProducts,
+    setProducts,
     clearProducts
 };
